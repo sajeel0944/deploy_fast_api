@@ -58,7 +58,7 @@ async def ai_agent(prompt: str = Query(..., description="Prompt from user")):
         return {"error": str(e)}
 
 
-# @app.post("/post")
-# def hello_word():
-#     """Basic root endpoint"""
-#     return {"message": "this is post request"}
+@app.get("/")
+def hello_word():
+    """Basic root endpoint"""
+    return {"message": "this is post request"}
